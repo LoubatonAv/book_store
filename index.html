@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="create-btn" onclick="onAddBook()">Create a new book</button>
+    <form class="add-form">
+      Name: <input class="input" type="text" name="name"/>
+    </br>
+      Price:<input class="input" type="text" name="price"/>
+    </br>
+      <button type="button" onclick="onSubmitAdd()">Submit</button>
+    </form>
+    <div class="modal">
+      <button onclick="closeModal()" class="close-modal">x</button>
+      <h2></h2>
+      <img src="./img/1.png">
+      <p class="modal-content"></p>
+      <div class="rate-bar">
+        <button> - </button>
+        <div class="rate">0</div>
+        <button >+</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+  <script src="js/services/util.service.js"></script>
+  <script src="js/services/storage.service.js"></script>
+  <script src="js/services/book.service.js"></script>
+  <script src="js/book.controller.js"></script>
+</html>
